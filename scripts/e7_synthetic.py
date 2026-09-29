@@ -1,6 +1,5 @@
-"""E7 DEVELOPMENT-set evaluation (resolver on hand-written perturbations used during development). Not independent.
-Holdout: scripts/e7_holdout.py. Real transcripts: scripts/e7_on_stt.py."""
-Part 2 (scripts/e7_on_stt.py) runs the same resolver on real E4 transcripts once they exist."""
+"""E7 DEVELOPMENT-set evaluation: resolver on hand-written perturbations that were USED during development. Not independent.
+Holdout: scripts/e7_holdout.py (single use). Decisive evaluation: scripts/e7_on_stt.py on real E4 transcripts."""
 from __future__ import annotations
 import subprocess, sys, datetime as dt
 from collections import defaultdict
