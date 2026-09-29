@@ -1,0 +1,7 @@
+# What the fictional business would realistically know and put in keyterms. NOTHING from the confusable or
+# unseen partitions may be added here (that would leak test answers and inflate keyterm results).
+business: Kaveri Auto Care
+locality: Kukatpally
+advisors: [Srinivas Reddy, Srinivas Rao, Lakshmi Naidu]
+services: [General service, Oil change, Brake inspection, AC repair, Battery replacement, Wheel alignment]
+extra_terms: [pickup, drop, alignment, balancing, servicing]

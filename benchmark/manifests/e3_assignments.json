@@ -1,0 +1,5046 @@
+{
+ "prompt_set_version": "c305f3c139c4",
+ "seed": 20261001,
+ "speakers": {
+  "SPK01": [
+   {
+    "n": 1,
+    "prompt_id": "P021",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P087",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P019",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P111",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P070",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P048",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P052",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P090",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P046",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P012",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P084",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P041",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P035",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P062",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P078",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P095",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P079",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P098",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P107",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P002",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P088",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P058",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P093",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P027",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P037",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P049",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P067",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P011",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P066",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P082",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P015",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P003",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P028",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P083",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P089",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P017",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P044",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P010",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P007",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P118",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P059",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P055",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P034",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P042",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P106",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P031",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P063",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P051",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P072",
+    "condition": "car"
+   }
+  ],
+  "SPK02": [
+   {
+    "n": 1,
+    "prompt_id": "P024",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P050",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P112",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P088",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P025",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P007",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P104",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P076",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P114",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P030",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P061",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P045",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P002",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P085",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P033",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P019",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P092",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P052",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P006",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P109",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P074",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P070",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P026",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P005",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P031",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P035",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P044",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P072",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P082",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P038",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P053",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P058",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P120",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P083",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P055",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P110",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P009",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P018",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P118",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P010",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P011",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P087",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P097",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P069",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P008",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P017",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P032",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P113",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P066",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P080",
+    "condition": "car"
+   }
+  ],
+  "SPK03": [
+   {
+    "n": 1,
+    "prompt_id": "P096",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P019",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P052",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P014",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P042",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P051",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P060",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P038",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P005",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P050",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P057",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P022",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P080",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P107",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P071",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P023",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P103",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P110",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P114",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P034",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P049",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P100",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P055",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P094",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P062",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P053",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P065",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P045",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P102",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P085",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P003",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P068",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P108",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P093",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P063",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P059",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P004",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P035",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P029",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P120",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P073",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P028",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P015",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P118",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P106",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P079",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P077",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P056",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P001",
+    "condition": "car"
+   }
+  ],
+  "SPK04": [
+   {
+    "n": 1,
+    "prompt_id": "P079",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P020",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P116",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P072",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P090",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P002",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P101",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P108",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P059",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P015",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P040",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P097",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P047",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P051",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P036",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P087",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P118",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P054",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P042",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P027",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P095",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P039",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P082",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P053",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P081",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P080",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P106",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P098",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P049",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P057",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P086",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P008",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P011",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P022",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P045",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P043",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P018",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P041",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P046",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P076",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P104",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P052",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P063",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P074",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P024",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P044",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P017",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P056",
+    "condition": "car"
+   }
+  ],
+  "SPK05": [
+   {
+    "n": 1,
+    "prompt_id": "P082",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P029",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P089",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P100",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P120",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P034",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P039",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P051",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P019",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P065",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P040",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P077",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P011",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P102",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P114",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P004",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P007",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P013",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P052",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P024",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P032",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P041",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P059",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P098",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P090",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P093",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P081",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P080",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P119",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P066",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P110",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P073",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P113",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P079",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P042",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P038",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P115",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P097",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P035",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P068",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P001",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P064",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P033",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P062",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P109",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P069",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P037",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P002",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P045",
+    "condition": "car"
+   }
+  ],
+  "SPK06": [
+   {
+    "n": 1,
+    "prompt_id": "P002",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P113",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P046",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P117",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P086",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P102",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P051",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P109",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P105",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P049",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P089",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P095",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P059",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P092",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P055",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P063",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P119",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P118",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P048",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P022",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P091",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P003",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P077",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P120",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P047",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P112",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P009",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P076",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P044",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P031",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P054",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P084",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P001",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P111",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P068",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P110",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P045",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P096",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P014",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P006",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P073",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P067",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P082",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P069",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P114",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P057",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P088",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P033",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P035",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P064",
+    "condition": "car"
+   }
+  ],
+  "SPK07": [
+   {
+    "n": 1,
+    "prompt_id": "P107",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P094",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P110",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P043",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P009",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P047",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P023",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P117",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P105",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P096",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P100",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P072",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P004",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P044",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P115",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P061",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P021",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P020",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P019",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P060",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P007",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P067",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P039",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P008",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P028",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P001",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P055",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P010",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P109",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P003",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P093",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P041",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P077",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P073",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P034",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P058",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P048",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P113",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P120",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P025",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P059",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P070",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P046",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P052",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P081",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P037",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P032",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P063",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P026",
+    "condition": "car"
+   }
+  ],
+  "SPK08": [
+   {
+    "n": 1,
+    "prompt_id": "P113",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P015",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P008",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P074",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P065",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P102",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P080",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P050",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P001",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P092",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P045",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P057",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P009",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P020",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P051",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P033",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P002",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P068",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P111",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P061",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P089",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P047",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P026",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P106",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P091",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P073",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P115",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P087",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P005",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P067",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P082",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P066",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P011",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P105",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P036",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P086",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P043",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P075",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P004",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P085",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P109",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P079",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P103",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P028",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P097",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P060",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P030",
+    "condition": "car"
+   }
+  ],
+  "SPK09": [
+   {
+    "n": 1,
+    "prompt_id": "P067",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P003",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P117",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P017",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P040",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P028",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P056",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P047",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P076",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P070",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P102",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P046",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P034",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P013",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P061",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P120",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P008",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P096",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P039",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P109",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P078",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P010",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P050",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P084",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P036",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P051",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P093",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P053",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P068",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P024",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P001",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P099",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P014",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P030",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P009",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P064",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P021",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P045",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P073",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P083",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P038",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P077",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P031",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P087",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P005",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P081",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P012",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P015",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P033",
+    "condition": "car"
+   }
+  ],
+  "SPK10": [
+   {
+    "n": 1,
+    "prompt_id": "P058",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P042",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P075",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P108",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P007",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P066",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P057",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P069",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P033",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P098",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P018",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P101",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P085",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P039",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P090",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P116",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P088",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P064",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P081",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P020",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P106",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P022",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P046",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P026",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P011",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P048",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P118",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P079",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P073",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P077",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P093",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P061",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P086",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P091",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P051",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P006",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P056",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P065",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P097",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P070",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P031",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P027",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P104",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P068",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P023",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P094",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P021",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P096",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P041",
+    "condition": "car"
+   }
+  ],
+  "SPK11": [
+   {
+    "n": 1,
+    "prompt_id": "P118",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P081",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P022",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P083",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P009",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P060",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P112",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P058",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P102",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P032",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P043",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P039",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P051",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P085",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P072",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P082",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P107",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P104",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P090",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P092",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P068",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P016",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P020",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P080",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P028",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P108",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P087",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P025",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P048",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P046",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P103",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P059",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P037",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P017",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P095",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P038",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P012",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P089",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P006",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P117",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P069",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P073",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P010",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P054",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P047",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P061",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P100",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P114",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P033",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P015",
+    "condition": "car"
+   }
+  ],
+  "SPK12": [
+   {
+    "n": 1,
+    "prompt_id": "P010",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P075",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P080",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P050",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P114",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P046",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P102",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P100",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P103",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P037",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P109",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P085",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P074",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P052",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P068",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P023",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P093",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P030",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P094",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P066",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P099",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P065",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P061",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P016",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P098",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P026",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P036",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P029",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P017",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P012",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P006",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P031",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P042",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P087",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P089",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P034",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P039",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P073",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P081",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P038",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P090",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P044",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P095",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P024",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P033",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P053",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P086",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P088",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P009",
+    "condition": "car"
+   }
+  ],
+  "SPK13": [
+   {
+    "n": 1,
+    "prompt_id": "P050",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P017",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P110",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P032",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P004",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P030",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P057",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P066",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P114",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P041",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P006",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P024",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P109",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P002",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P083",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P029",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P059",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P021",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P069",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P005",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P014",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P093",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P107",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P008",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P116",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P015",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P033",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P044",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P061",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P009",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P119",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P084",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P082",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P086",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P118",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P012",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P074",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P022",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P098",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P056",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P089",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P046",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P052",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P103",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P070",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P096",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P031",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P019",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P087",
+    "condition": "car"
+   }
+  ],
+  "SPK14": [
+   {
+    "n": 1,
+    "prompt_id": "P091",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P043",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P019",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P040",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P049",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P059",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P082",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P098",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P004",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P003",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P060",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P084",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P103",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P068",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P072",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P070",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P085",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P032",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P033",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P117",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P052",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P014",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P094",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P065",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P024",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P054",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P113",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P056",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P061",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P034",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P080",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P062",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P031",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P047",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P092",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P046",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P005",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P111",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P106",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P027",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P015",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P002",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P053",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P101",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P010",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P051",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P006",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P055",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P038",
+    "condition": "car"
+   }
+  ],
+  "SPK15": [
+   {
+    "n": 1,
+    "prompt_id": "P041",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P003",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P015",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P065",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P063",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P109",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P072",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P083",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P099",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P013",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P094",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P028",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P100",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P014",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P059",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P029",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P016",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P042",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P046",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P077",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P043",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P086",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P091",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P067",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P004",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P115",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P097",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P031",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P026",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P069",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P104",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P006",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P113",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P053",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P085",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P102",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P035",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P105",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P034",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P117",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P084",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P075",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P080",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P060",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P078",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P112",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P022",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P103",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P082",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P030",
+    "condition": "car"
+   }
+  ],
+  "SPK16": [
+   {
+    "n": 1,
+    "prompt_id": "P007",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P099",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P118",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P003",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P017",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P082",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P091",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P106",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P035",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P045",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P004",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P002",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P113",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P031",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P020",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P061",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P030",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P108",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P033",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P104",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P005",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P010",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P037",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P102",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P028",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P026",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P008",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P059",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P039",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P019",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P081",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P110",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P054",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P049",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P009",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P114",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P115",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P120",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P111",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P022",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P089",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P074",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P024",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P011",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P034",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P013",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P032",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P051",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P016",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P067",
+    "condition": "car"
+   }
+  ],
+  "SPK17": [
+   {
+    "n": 1,
+    "prompt_id": "P006",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P109",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P052",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P038",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P049",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P059",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P107",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P114",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P083",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P022",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P119",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P095",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P068",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P044",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P040",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P047",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P001",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P076",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P016",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P118",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P048",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P089",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P070",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P080",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P079",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P012",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P102",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P115",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P116",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P023",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P021",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P100",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P028",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P057",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P104",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P033",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P010",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P042",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P092",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P061",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P086",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P067",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P009",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P036",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P018",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P015",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P029",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P039",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P020",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P064",
+    "condition": "car"
+   }
+  ],
+  "SPK18": [
+   {
+    "n": 1,
+    "prompt_id": "P070",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P063",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P044",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P014",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P064",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P066",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P111",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P017",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P115",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P073",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P069",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P097",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P095",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P050",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P071",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P002",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P052",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P109",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P082",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P083",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P105",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P049",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P006",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P077",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P061",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P039",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P022",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P005",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P036",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P016",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P046",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P034",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P058",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P056",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P089",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P112",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P117",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P030",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P025",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P092",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P075",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P027",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P019",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P102",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P120",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P031",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P088",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P098",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P090",
+    "condition": "car"
+   }
+  ],
+  "SPK19": [
+   {
+    "n": 1,
+    "prompt_id": "P009",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P031",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P072",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P042",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P106",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P035",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P022",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P010",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P062",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P054",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P069",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P067",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P055",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P114",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P028",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P046",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P056",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P007",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P058",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P030",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P076",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P064",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P071",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P094",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P107",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P021",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P118",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P103",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P090",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P043",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P066",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P015",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P084",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P087",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P012",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P082",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P060",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P013",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P011",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P102",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P083",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P088",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P024",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P040",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P096",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P099",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P004",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P077",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P014",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P078",
+    "condition": "car"
+   }
+  ],
+  "SPK20": [
+   {
+    "n": 1,
+    "prompt_id": "P059",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 2,
+    "prompt_id": "P092",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 3,
+    "prompt_id": "P012",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 4,
+    "prompt_id": "P081",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 5,
+    "prompt_id": "P067",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 6,
+    "prompt_id": "P057",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 7,
+    "prompt_id": "P053",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 8,
+    "prompt_id": "P065",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 9,
+    "prompt_id": "P031",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 10,
+    "prompt_id": "P066",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 11,
+    "prompt_id": "P114",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 12,
+    "prompt_id": "P041",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 13,
+    "prompt_id": "P013",
+    "condition": "quiet_room"
+   },
+   {
+    "n": 14,
+    "prompt_id": "P099",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 15,
+    "prompt_id": "P056",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 16,
+    "prompt_id": "P089",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 17,
+    "prompt_id": "P044",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 18,
+    "prompt_id": "P107",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 19,
+    "prompt_id": "P090",
+    "condition": "handset_outdoors"
+   },
+   {
+    "n": 20,
+    "prompt_id": "P101",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 21,
+    "prompt_id": "P054",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 22,
+    "prompt_id": "P028",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 23,
+    "prompt_id": "P003",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 24,
+    "prompt_id": "P034",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 25,
+    "prompt_id": "P007",
+    "condition": "speakerphone"
+   },
+   {
+    "n": 26,
+    "prompt_id": "P030",
+    "condition": "fan_on"
+   },
+   {
+    "n": 27,
+    "prompt_id": "P071",
+    "condition": "fan_on"
+   },
+   {
+    "n": 28,
+    "prompt_id": "P073",
+    "condition": "fan_on"
+   },
+   {
+    "n": 29,
+    "prompt_id": "P093",
+    "condition": "fan_on"
+   },
+   {
+    "n": 30,
+    "prompt_id": "P109",
+    "condition": "fan_on"
+   },
+   {
+    "n": 31,
+    "prompt_id": "P004",
+    "condition": "fan_on"
+   },
+   {
+    "n": 32,
+    "prompt_id": "P077",
+    "condition": "fan_on"
+   },
+   {
+    "n": 33,
+    "prompt_id": "P029",
+    "condition": "tv_background"
+   },
+   {
+    "n": 34,
+    "prompt_id": "P102",
+    "condition": "tv_background"
+   },
+   {
+    "n": 35,
+    "prompt_id": "P091",
+    "condition": "tv_background"
+   },
+   {
+    "n": 36,
+    "prompt_id": "P011",
+    "condition": "tv_background"
+   },
+   {
+    "n": 37,
+    "prompt_id": "P017",
+    "condition": "tv_background"
+   },
+   {
+    "n": 38,
+    "prompt_id": "P097",
+    "condition": "tv_background"
+   },
+   {
+    "n": 39,
+    "prompt_id": "P046",
+    "condition": "traffic"
+   },
+   {
+    "n": 40,
+    "prompt_id": "P063",
+    "condition": "traffic"
+   },
+   {
+    "n": 41,
+    "prompt_id": "P049",
+    "condition": "traffic"
+   },
+   {
+    "n": 42,
+    "prompt_id": "P111",
+    "condition": "traffic"
+   },
+   {
+    "n": 43,
+    "prompt_id": "P032",
+    "condition": "traffic"
+   },
+   {
+    "n": 44,
+    "prompt_id": "P026",
+    "condition": "traffic"
+   },
+   {
+    "n": 45,
+    "prompt_id": "P100",
+    "condition": "car"
+   },
+   {
+    "n": 46,
+    "prompt_id": "P076",
+    "condition": "car"
+   },
+   {
+    "n": 47,
+    "prompt_id": "P033",
+    "condition": "car"
+   },
+   {
+    "n": 48,
+    "prompt_id": "P084",
+    "condition": "car"
+   },
+   {
+    "n": 49,
+    "prompt_id": "P062",
+    "condition": "car"
+   },
+   {
+    "n": 50,
+    "prompt_id": "P038",
+    "condition": "car"
+   }
+  ]
+ }
+}

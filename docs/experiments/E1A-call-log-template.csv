@@ -1,0 +1,1 @@
+call_id,date_ist,scenario_id,tester,region,carrier,handset_mode,agent_version,eagerness,voice,interaction_id,task_completed,p0_count,p1_count,p2_count,entity_errors,wrong_tool_calls,failed_tool_calls,false_cutoffs,caller_repetitions,duration_s,perceived_slowest_gap_s,naturalness_1to5,notes

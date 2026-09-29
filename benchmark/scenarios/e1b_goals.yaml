@@ -1,0 +1,11 @@
+# E1B native-speaker baseline. Testers get GOALS, never sentences. >=5 testers (2 Telangana, 2 Coastal Andhra,
+# 1 Rayalaseema), >=3 calls each. Exploratory baseline, not statistical proof. Blind: they only know "System X".
+goals:
+- {id: G1, goal: "Book a service for next Saturday afternoon for your car."}
+- {id: G2, goal: "Ask the price of two services, change your mind, and book a different one."}
+- {id: G3, goal: "Give your vehicle number quickly, the way you normally would, and book an oil change."}
+- {id: G4, goal: "Interrupt the receptionist halfway through a sentence to change the time."}
+- {id: G5, goal: "Mix Telugu and English as you naturally do. Ask if AC repair can be done tomorrow."}
+- {id: G6, goal: "Ask for a specific advisor by first name only and see what happens."}
+- {id: G7, goal: "Pretend you are driving and distracted: pause, say 'ఒక్క నిమిషం', then continue."}
+- {id: G8, goal: "Ask something the shop cannot answer (insurance claim status) and see how it is handled."}

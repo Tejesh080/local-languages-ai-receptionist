@@ -1,0 +1,7 @@
+__pycache__/
+*.db
+.env
+collection/recordings/
+benchmark/runs/
+benchmark/manifests/e3_dataset.jsonl
+.pytest_cache/

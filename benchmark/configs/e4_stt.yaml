@@ -1,0 +1,12 @@
+# E4 STT configurations. Only providers whose CURRENT docs confirm Telugu (checked 2026-09-30):
+#   Sarvam realtime (te-IN; saaras:v3-realtime, saaras:v4; keyterms v4 only) and Deepgram nova-3 (language=te; keyterm).
+# keyterms come ONLY from benchmark/configs/tenant_known_entities.yaml (no confusable/unseen answers).
+common: {sample_rate: 8000, encoding: linear16, chunk_ms: 100, trailing_silence_ms: 1500}
+configs:
+  - {name: sarvam_v3rt,            provider: sarvam,   model: "saaras:v3-realtime", mode: transcribe, keyterms: false}
+  - {name: sarvam_v4,              provider: sarvam,   model: "saaras:v4",          mode: transcribe, keyterms: false}
+  - {name: sarvam_v4_kt,           provider: sarvam,   model: "saaras:v4",          mode: transcribe, keyterms: true}
+  - {name: sarvam_v4_codemix,      provider: sarvam,   model: "saaras:v4",          mode: codemix,    keyterms: false}
+  - {name: sarvam_v4_codemix_kt,   provider: sarvam,   model: "saaras:v4",          mode: codemix,    keyterms: true}
+  - {name: deepgram_nova3_te,      provider: deepgram, model: "nova-3",             language: te,     keyterms: false}
+  - {name: deepgram_nova3_te_kt,   provider: deepgram, model: "nova-3",             language: te,     keyterms: true}
