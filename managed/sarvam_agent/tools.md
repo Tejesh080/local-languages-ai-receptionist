@@ -42,5 +42,9 @@ curl -X POST https://HOST/tools/request_callback -H 'Authorization: Bearer SECRE
 Note: `get_service_info` is a sixth tool beyond the five originally specified. It is required because smoke scenarios ask
 for prices and prices must come from the backend.
 
-Deployment post-call webhook (`webhook_config` on the inbound deployment):
-`https://HOST/webhooks/sarvam/<WEBHOOK_PATH_SECRET>`.
+Deployment post-call webhook (decision 0003): set on the inbound deployment (API/MCP `webhook_config`):
+`{"url": "https://HOST/webhooks/sarvam/call-complete", "metadata": {"tvl_webhook_token": "<WEBHOOK_METADATA_TOKEN>"}}`.
+Never put the token in the URL.
+
+`lookup_customer` semantics (decision 0004): it returns `caller_id_match`, `identity_assurance` and masked vehicles only.
+It never returns names. `authenticated` is always false.

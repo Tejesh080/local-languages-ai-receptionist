@@ -1,9 +1,11 @@
-# Phase 2 status (2026-09-30)
+# Phase 2 status (updated after Phase 2A hardening, 2026-09-30)
+
+See docs/results/phase-2a-hardening.md. 57 tests passing.
 
 | Item | Status | Evidence |
 |---|---|---|
 | Environment audit | Done | docs/experiments/environment-audit.md |
-| Repository | Done (lab only, no SaaS) | this repo, 21 automated tests passing |
+| Repository | Done (lab only, no SaaS) | this repo, 57 automated tests passing |
 | Sarvam MCP / account capability check | BLOCKED: needs your login | managed/sarvam_agent/claude_code_setup.md |
 | Voice Agents price / concurrency | BLOCKED: needs your account | docs/experiments/sarvam-account-capabilities.md |
 | Mock automotive backend + 6 tools | Built and tested locally | backend/, tests/test_backend.py |

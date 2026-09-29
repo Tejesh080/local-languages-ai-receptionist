@@ -16,5 +16,8 @@ agent_phone_number. Sarvam documents a single egress IP to allowlist: 4.213.167.
    It is not authentication.
 4. Interaction ID is used for idempotency keys and to join tool calls, bookings and the post-call webhook.
 
+**Update 2026-09-30 (Phase 2A):** credentials carry a purpose (`tools` or `webhook`); a tool secret cannot authenticate
+webhooks and vice versa. Webhook authentication moved from a URL path secret to a body token (decision 0003).
+
 **Consequences:** A leaked secret exposes one tenant only; rotate by adding a new credential and deactivating the old.
 If captures show Sarvam sends a verifiable signature or agent metadata, add it as a second factor rather than replacing (1).

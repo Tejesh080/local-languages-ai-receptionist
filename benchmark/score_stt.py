@@ -10,6 +10,7 @@ sys.path.insert(0, str(ROOT))
 from entities.normalize import for_wer, spoken_digits_to_digits
 from benchmark.scoring.entities_match import match
 from benchmark.scoring.stats import wilson
+from benchmark.replay import latency_summary
 
 NOISY = {"fan_on", "tv_background", "traffic", "car", "handset_outdoors"}
 
@@ -27,12 +28,13 @@ def pct(xs, p):
 
 def main(run_dir: str, manifest: str) -> str:
     items = {json.loads(l)["id"]: json.loads(l) for l in open(manifest, encoding="utf-8")}
-    rows = [json.loads(l) for l in open(Path(run_dir) / "results.jsonl", encoding="utf-8")]
+    rows = [r for r in (json.loads(l) for l in open(Path(run_dir) / "results.jsonl", encoding="utf-8")) if r.get("item_id")]
+    aborted = [json.loads(l) for l in open(Path(run_dir) / "results.jsonl", encoding="utf-8") if '"config_aborted"' in l]
     run = json.load(open(Path(run_dir) / "run.json"))
     ent = defaultdict(lambda: [0, 0, 0])          # (config, slice, etype) -> [n, raw_ok, norm_ok]
     errm = defaultdict(int)                        # (config, etype, kind)
     wer_acc = defaultdict(lambda: [[], [], [], []])  # config, slice -> refs, hyps (raw), refs, hyps (normalized digits)
-    lat = defaultdict(lambda: defaultdict(list))
+    lat_rows = defaultdict(list)
     errs = defaultdict(int)
     for r in rows:
         it = items.get(r["item_id"])
@@ -41,8 +43,7 @@ def main(run_dir: str, manifest: str) -> str:
         cfg, hyp = r["config"], r.get("transcript") or ""
         if r.get("errors"):
             errs[cfg] += 1
-        lat[cfg]["first_partial_ms"].append(r.get("first_partial_ms"))
-        lat[cfg]["final_after_speech_end_ms"].append(r.get("final_after_speech_end_ms"))
+        lat_rows[cfg].append(r)
         for sl in slices_for(it):
             w = wer_acc[(cfg, sl)]
             w[0].append(for_wer(it["text_ref"]) or "-"); w[1].append(for_wer(hyp) or "-")
@@ -87,10 +88,15 @@ def main(run_dir: str, manifest: str) -> str:
     for c in configs:
         w = wer_acc[(c, "ALL")]
         L.append(f"| {c} | {jiwer.wer(w[0], w[1]):.1%} [{jiwer.wer(w[2], w[3]):.1%}] | {jiwer.cer(w[0], w[1]):.1%} [{jiwer.cer(w[2], w[3]):.1%}] |")
-    L += ["", "## Latency (replayed at real-time pace; client-side clock)", "", "| Config | first partial p50 / p95 ms | final after speech end p50 / p95 ms |", "|---|---|---|"]
+    L += ["", f"## Endpoint latency: speech end -> first final after it (decision 0002, replay={run.get('replay')})", "",
+          "Excluded from percentiles but counted: final_before_speech_end (provider finalized early), no_final, errors.", "",
+          "| Config | N valid | P50 ms | P95 ms | P99 ms | flagged (by reason) | first partial P50 ms |", "|---|---|---|---|---|---|---|"]
     for c in configs:
-        fp, fe = lat[c]["first_partial_ms"], lat[c]["final_after_speech_end_ms"]
-        L.append(f"| {c} | {pct(fp,.5)} / {pct(fp,.95)} | {pct(fe,.5)} / {pct(fe,.95)} |")
+        sm = latency_summary(lat_rows[c])
+        fp = [r.get("first_partial_ms") for r in lat_rows[c]]
+        L.append(f"| {c} | {sm['n_valid']} | {sm['p50']} | {sm['p95']} | {sm['p99']} | {sm['flags'] or 0} | {pct(fp, .5)} |")
+    if aborted:
+        L += ["", "## Aborted configurations", ""] + [f"- {a['config']}: {a['reason']}" for a in aborted]
     L += ["", "## Error matrix (slice ALL): counts by entity type and error kind", "", "| Config | type | ok | missing | wrong_value | invalid_format |", "|---|---|---|---|---|---|"]
     for c in configs:
         for et in sorted({k[1] for k in errm if k[0] == c}):

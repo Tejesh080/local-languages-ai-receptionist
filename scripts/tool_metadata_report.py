@@ -7,13 +7,17 @@ from backend.db import SessionLocal
 from backend.models import RequestCapture
 
 SARVAM_IP = "4.213.167.70"
-FIELDS = {  # field -> how to detect it in a capture
+def _present(v) -> bool:
+    return bool(v.get("present")) if isinstance(v, dict) else bool(v)
+
+
+FIELDS = {  # field -> how to detect it in a capture (bodies are redacted by default: presence, not values)
     "Authorization (our bearer secret)": lambda c: "authorization" in {k.lower() for k in c.headers},
     "Signature / HMAC header from Sarvam": lambda c: any(any(s in k.lower() for s in ("signature", "hmac", "x-sarvam")) for k in c.headers),
     "Any x-sarvam-* or platform header": lambda c: any(k.lower().startswith("x-sarvam") for k in c.headers),
     "User-Agent": lambda c: "user-agent" in {k.lower() for k in c.headers},
     "Source IP == documented Sarvam IP": lambda c: c.source_ip == SARVAM_IP or SARVAM_IP in str(c.headers.get("x-forwarded-for", "")),
-    "Caller number (User Identifier)": lambda c: isinstance(c.body, dict) and bool(c.body.get("caller_number")),
+    "Caller number (User Identifier)": lambda c: isinstance(c.body, dict) and _present(c.body.get("caller_number")),
     "Interaction / call ID": lambda c: isinstance(c.body, dict) and bool(c.body.get("interaction_id")),
     "Called number (our DID)": lambda c: any(k in str(c.body).lower() or k in str(c.headers).lower() for k in ("agent_phone_number", "called", "to_number", "did")),
     "Agent ID": lambda c: any(k in str(c.headers).lower() + str(c.body).lower() for k in ("app_id", "agent_id")),
@@ -36,7 +40,9 @@ def main(out: str = "docs/experiments/sarvam-tool-metadata.md") -> None:
         lines.append(f"| {name} | {cls} | {hits}/{n} |")
     if caps:
         hdrs = sorted({k.lower() for c in caps for k in c.headers})
+        unknown = sorted({k for c in caps if isinstance(c.body, dict) for k, v in c.body.items() if isinstance(v, dict) and v.get("unknown_field")})
         lines += ["", "## All header names observed", ", ".join(hdrs),
+                  "", "## Body field names we did not define (values never stored)", ", ".join(unknown) or "none",
                   "", "## Source IPs observed", ", ".join(sorted({c.source_ip for c in caps}))]
     Path(out).write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))

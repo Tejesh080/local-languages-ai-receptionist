@@ -1,7 +1,7 @@
 # Sarvam tool-call metadata
 
 Status: NO REAL CAPTURES YET. This file is overwritten by `python scripts/tool_metadata_report.py` after the smoke calls.
-(The report pipeline was exercised locally with a simulated request on 2026-09-30; that local output is intentionally NOT kept.)
+Captures store field names, header names, source IP and presence/salted hashes; never plaintext personal values (Phase 2A).
 
 What the docs say (VERIFIED as documentation, 2026-09-30), to be confirmed or contradicted by captures:
 | Field | Documented? | Experimental status |
@@ -17,3 +17,6 @@ What the docs say (VERIFIED as documentation, 2026-09-30), to be confirmed or co
 | Tool call ID | Not documented | UNKNOWN |
 | Request signature / HMAC | Not documented | UNKNOWN |
 | Source IP | Documented egress IP 4.213.167.70 | UNKNOWN |
+| Caller-number provenance (User Identifier == real calling number) | Implied by docs | UNKNOWN (verify with scripts/hash_phone.py) |
+| Post-call webhook: signature / auth header | Not supported: only url + metadata (decision 0003) | PLATFORM LIMITATION (docs) |
+| Post-call webhook source IP | Not documented | UNKNOWN |

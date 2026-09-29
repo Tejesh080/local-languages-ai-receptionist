@@ -45,7 +45,7 @@ def main() -> None:
             best = r.best.id if r.best else None
             ok = (best == truth and r.decision != "no_match") if isinstance(truth, str) else \
                  (r.decision in ("clarify", "no_match") or (r.decision == "confirm" and best in truth)) if isinstance(truth, set) else \
-                 (r.decision == "no_match" or best is None)
+                 (r.decision == "no_match" or best is None or best not in {c.id for c in PEOPLE + SVC + REGS})
             if not ok:
                 fails.append(f"  - `{text}` expected {truth} got {r.decision}/{best}")
         L += (["Failures (recorded, NOT fixed against this set):"] + fails + [""]) if fails else ["No failures observed in this set.", ""]

@@ -7,24 +7,26 @@ System B: custom Pipecat pipeline, built only if triggered).
 ## What is here
 | Path | Purpose | Status |
 |---|---|---|
-| `backend/` | Mock automotive service centre (fictional "Kaveri Auto Care", Kukatpally) + 6 HTTP tools, tenant binding, request capture, post-call webhook | Tested locally |
+| `backend/` | Mock automotive service centre (fictional "Kaveri Auto Care", Kukatpally) + 6 HTTP tools, tenant binding, PII-redacted capture, body-token webhook, fail-closed config | Tested (SQLite + PostgreSQL) |
 | `entities/` | Deterministic normalization (Telugu digits, spoken numbers, vehicle regs incl. TS/TG/AP/BH, dates, times, prices) and resolver | Tested |
 | `managed/sarvam_agent/` | Agent instructions, tool cURLs, settings, important words, Claude Code + Sarvam MCP setup | Ready to apply |
 | `benchmark/scenarios/` | E1A 30 smoke scenarios, E1B goals | Ready |
-| `collection/` | E3 Exotel recorder, prompt generator, speaker sheets, consent | Recorder tested with simulated Exotel client |
-| `benchmark/` | E4 STT runner (Sarvam realtime, Deepgram nova-3 te), scoring by entity/slice, stats, latency tool | Scoring tested; no provider runs yet |
+| `collection/` | E3 Exotel recorder (mark-synchronised, immutable master + slices, speech timing), prompts, sheets, consent | Tested with simulated Exotel client |
+| `audio/`, `benchmark/` | Shared VAD, manifest + quality gate, derived segments, preflight/smoke, E4 runner (speech-end latency, circuit breaker), scoring | Tested against fake providers; no real provider runs yet |
 | `scripts/` | E1A report, tool-metadata report, E7 resolver evaluations | E7 synthetic runs recorded |
 | `docs/` | Protocols, decisions, results, evidence ledger | |
 
 ## Quick start
 ```bash
-pip install -r requirements.txt
-python -m pytest -q                      # 21 tests
-python -m backend.seed --with-credentials  # prints TOOLS_BEARER_SECRET and WEBHOOK_PATH_SECRET once
-TRUST_PROXY=1 uvicorn backend.app:app --port 8000
-ngrok http 8000                          # public HTTPS URL for Sarvam tools
+pip install -r requirements.txt pgserver      # pgserver: embedded PostgreSQL for the concurrency test
+python -m pytest -q                           # 57 tests (Postgres concurrency test runs if pgserver or PG_TEST_URL exists)
+cp .env.example .env && set -a && . ./.env && set +a      # then set PHONE_HASH_SALT
+python -m backend.seed --with-credentials     # prints TOOLS_BEARER_SECRET and WEBHOOK_METADATA_TOKEN once
+TRUST_PROXY=1 uvicorn backend.app:app --port 8000 --no-access-log
+ngrok http 8000                               # public HTTPS URL for Sarvam tools
+python -m benchmark.preflight                 # before ANY paid STT run
 ```
-Then follow `docs/experiments/E1A-protocol.md`.
+Then follow `docs/experiments/E1A-protocol.md`. Hardening details: `docs/results/phase-2a-hardening.md`.
 
 ## Rules this repo enforces
 - Transactional facts (hours, prices, slots, bookings) come only from the backend; the agent is told never to state them otherwise.
