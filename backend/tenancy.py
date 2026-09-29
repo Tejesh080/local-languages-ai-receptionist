@@ -2,7 +2,6 @@
 from __future__ import annotations
 import hashlib
 import hmac
-import os
 import secrets
 from fastapi import HTTPException, Request
 from sqlalchemy import select
@@ -10,8 +9,6 @@ from sqlalchemy.orm import Session
 from .models import AgentCredential
 
 FORBIDDEN_BODY_KEYS = {"tenant_id", "tenant", "org_id", "organization_id", "business_id"}
-_ALLOWED_IPS = {ip.strip() for ip in os.environ.get("ALLOWED_SOURCE_IPS", "").split(",") if ip.strip()}
-_TRUST_PROXY = os.environ.get("TRUST_PROXY", "0") == "1"
 
 
 def sha256(v: str) -> str:
@@ -22,24 +19,33 @@ def new_secret() -> str:
     return "tvl_" + secrets.token_urlsafe(32)
 
 
-def source_ip(request: Request) -> str:
-    if _TRUST_PROXY and request.headers.get("x-forwarded-for"):
+def source_ip(request: Request, trust_proxy: bool = False) -> str:
+    if trust_proxy and request.headers.get("x-forwarded-for"):
         return request.headers["x-forwarded-for"].split(",")[0].strip()
     return request.client.host if request.client else ""
 
 
-def resolve_tenant(request: Request, db: Session) -> tuple[str, str]:
-    """Return (tenant_id, credential_label) or raise 401. Optional source-IP allowlist (Sarvam documents 4.213.167.70)."""
-    if _ALLOWED_IPS and source_ip(request) not in _ALLOWED_IPS:
+def match_credential(db: Session, secret: str, purpose: str) -> AgentCredential | None:
+    digest = sha256(secret.strip())
+    for cred in db.scalars(select(AgentCredential).where(AgentCredential.active.is_(True), AgentCredential.purpose == purpose)):
+        if hmac.compare_digest(cred.secret_sha256, digest):
+            return cred
+    return None
+
+
+def resolve_tenant(request: Request, db: Session, allowed_ips: frozenset[str] = frozenset(),
+                   trust_proxy: bool = False) -> tuple[str, str]:
+    """Return (tenant_id, credential_label) or raise 401. Only `tools` credentials are accepted here.
+    Optional source-IP allowlist (Sarvam documents 4.213.167.70)."""
+    if allowed_ips and source_ip(request, trust_proxy) not in allowed_ips:
         raise HTTPException(status_code=401, detail="unauthorized")
     auth = request.headers.get("authorization", "")
     if not auth.lower().startswith("bearer "):
         raise HTTPException(status_code=401, detail="unauthorized")
-    digest = sha256(auth.split(" ", 1)[1].strip())
-    for cred in db.scalars(select(AgentCredential).where(AgentCredential.active.is_(True))):
-        if hmac.compare_digest(cred.secret_sha256, digest):
-            return cred.tenant_id, cred.label
-    raise HTTPException(status_code=401, detail="unauthorized")
+    cred = match_credential(db, auth.split(" ", 1)[1], "tools")
+    if cred is None:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    return cred.tenant_id, cred.label
 
 
 def redact_headers(headers: dict[str, str]) -> dict[str, str]:

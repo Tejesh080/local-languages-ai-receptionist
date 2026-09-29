@@ -6,7 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from entities.resolver import resolve_name, resolve_vehicle
 from benchmark.scoring.stats import describe
-from scripts.e7_synthetic import PEOPLE, SVC, REGS
+from scripts.e7_synthetic import PEOPLE, SVC, REGS  # tenant candidates
 
 
 def main(run_dir: str, manifest: str) -> None:

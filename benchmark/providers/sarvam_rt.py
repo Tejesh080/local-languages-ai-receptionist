@@ -1,57 +1,82 @@
-"""Sarvam realtime STT (wss://api.sarvam.ai/speech-to-text-realtime/ws), per docs checked 2026-09-29.
-Auth header name `api-subscription-key` follows Sarvam's REST convention: VERIFY on first run (error 1003 = bad key)."""
+"""Sarvam realtime STT. Protocol re-verified 2026-09-30 against docs.sarvam.ai realtime-streaming guide and the
+AsyncAPI reference (api-reference/speech-to-text/transcribe/realtime/ws):
+- URL wss://api.sarvam.ai/speech-to-text-realtime/ws ; auth header `API-Subscription-Key`
+- client: {"event":"audio_input","audio":<b64>}, {"event":"end"} (also speech_start/speech_end/flush in manual mode)
+- server: session.begin{request_id,config}, vad.speech_start/end, transcript.partial/final{text,language?},
+          session.end{audio_duration_s (billed; string-typed float)}, error{code,is_fatal,message,status_code?}
+- keyterms: saaras:v4 only, JSON list <=50 x 64 chars, connection query parameter."""
 from __future__ import annotations
-import asyncio, base64, json, os, time, urllib.parse
+import asyncio, base64, json, os, urllib.parse
 import websockets
 from .base import STTResult
+from benchmark.replay import ReplayPlan, Timeline, send_paced, endpoint_latency
 
-URL = "wss://api.sarvam.ai/speech-to-text-realtime/ws"
+URL = os.environ.get("SARVAM_RT_URL", "wss://api.sarvam.ai/speech-to-text-realtime/ws")
 
 
-async def transcribe(pcm: bytes, cfg: dict, keyterms: list[str], rate: int = 8000) -> STTResult:
+def build_url(cfg: dict, keyterms: list[str], rate: int) -> str:
     params = {"language_code": cfg.get("language_code", "te-IN"), "model": cfg["model"], "mode": cfg.get("mode", "transcribe"),
               "stream_type": cfg.get("stream_type", "fast"), "encoding": "linear16", "sample_rate": str(rate),
               "endpointing": "vad", "silence_duration_ms": str(cfg.get("silence_duration_ms", 500))}
     if keyterms:
-        params["keyterms"] = json.dumps(keyterms[:50], ensure_ascii=False)
-    url = URL + "?" + urllib.parse.urlencode(params)
-    res = STTResult()
-    chunk = rate * 2 * cfg.get("chunk_ms", 100) // 1000
-    speech_len_s = len(pcm) / (2 * rate)
-    padded = pcm + b"\x00" * (rate * 2 * cfg.get("trailing_silence_ms", 1500) // 1000)
-    finals: list[str] = []
-    async with websockets.connect(url, additional_headers={"api-subscription-key": os.environ["SARVAM_API_KEY"]},
-                                  max_size=2**22) as ws:
-        t0 = time.perf_counter()
+        if not cfg["model"].startswith("saaras:v4"):
+            raise ValueError("keyterms are supported only on saaras:v4")
+        if len(keyterms) > 50 or any(len(k) > 64 for k in keyterms):
+            raise ValueError("keyterms: max 50 terms of 64 chars")
+        params["keyterms"] = json.dumps(keyterms, ensure_ascii=False)
+    return URL + "?" + urllib.parse.urlencode(params)
 
+
+def _f(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+async def transcribe(plan: ReplayPlan, cfg: dict, keyterms: list[str], tl: Timeline | None = None) -> STTResult:
+    tl = tl or Timeline()
+    res, finals_t, texts, vad_end = STTResult(), [], [], []
+    async with websockets.connect(build_url(cfg, keyterms, plan.rate), max_size=2**22,
+                                  additional_headers={"API-Subscription-Key": os.environ["SARVAM_API_KEY"]}) as ws:
         async def send():
-            for i in range(0, len(padded), chunk):
-                await ws.send(json.dumps({"event": "audio_input", "audio": base64.b64encode(padded[i:i + chunk]).decode()}))
-                await asyncio.sleep(cfg.get("chunk_ms", 100) / 1000)       # real-time pacing
+            await send_paced(plan, lambda c: ws.send(json.dumps({"event": "audio_input", "audio": base64.b64encode(c).decode()})), tl)
             await ws.send(json.dumps({"event": "end"}))
 
         async def recv():
             async for msg in ws:
-                ev = json.loads(msg); res.raw_events += 1
-                now_ms = (time.perf_counter() - t0) * 1000
-                kind = ev.get("event")
-                if kind == "transcript.partial":
+                ev = json.loads(msg); t = tl.clock(); kind = ev.get("event", "?")
+                res.events[kind] = res.events.get(kind, 0) + 1
+                if kind == "session.begin":
+                    res.session = {"request_id": ev.get("request_id"), "config": ev.get("config")}
+                elif kind == "transcript.partial":
                     res.partials += 1
-                    res.first_partial_ms = res.first_partial_ms or now_ms
+                    if res.first_partial_ms is None and tl.t0 is not None:
+                        res.first_partial_ms = tl.rel_ms(t)
                 elif kind == "transcript.final":
-                    finals.append(ev.get("text", ""))
-                    res.final_ms = now_ms
-                    res.final_after_speech_end_ms = now_ms - speech_len_s * 1000
+                    finals_t.append(t); texts.append(ev.get("text", ""))
                     res.detected_language = ev.get("language", res.detected_language)
+                elif kind == "vad.speech_end":
+                    vad_end.append(t)
                 elif kind == "session.end":
-                    res.billed_seconds = ev.get("audio_duration_s"); return
+                    res.billed_seconds = _f(ev.get("audio_duration_s")); return
                 elif kind == "error":
-                    res.errors.append(f"{ev.get('code')}:{ev.get('message')}")
+                    res.errors.append(f"{ev.get('code')}:{ev.get('status_code')}:{ev.get('message')}")
                     if ev.get("is_fatal"):
                         return
         try:
-            await asyncio.wait_for(asyncio.gather(send(), recv()), timeout=speech_len_s + 30)
-        except (asyncio.TimeoutError, websockets.ConnectionClosed) as e:
-            res.errors.append(type(e).__name__)
-    res.transcript = " ".join(f for f in finals if f).strip()
+            await asyncio.wait_for(asyncio.gather(send(), recv()),
+                                   timeout=sum(len(c) for c in plan.chunks) / (2 * plan.rate) + cfg.get("timeout_margin_s", 30))
+        except asyncio.TimeoutError:
+            res.errors.append("client_timeout")
+        except websockets.ConnectionClosed as e:
+            if not isinstance(e, websockets.ConnectionClosedOK):
+                res.errors.append(f"closed:{e.code}")
+    res.transcript = " ".join(x for x in texts if x).strip()
+    if tl.t0 is not None:
+        res.final_ms = [round(tl.rel_ms(t), 1) for t in finals_t]
+        res.speech_end_sent_ms = round(tl.rel_ms(tl.t_speech_end_sent), 1) if tl.t_speech_end_sent else None
+    res.final_after_speech_end_ms, res.latency_flag = endpoint_latency(tl, finals_t)
+    after = [t for t in vad_end if tl.t_speech_end_sent and t >= tl.t_speech_end_sent]
+    res.provider_endpoint_ms = round((after[0] - tl.t_speech_end_sent) * 1000, 1) if after else None
     return res

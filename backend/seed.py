@@ -40,6 +40,7 @@ def seed(days: int = 21) -> None:
     for m in (Booking, Callback, Slot, Vehicle, Customer, BusinessHours, Service, Advisor):
         db.execute(delete(m).where(m.tenant_id == TENANT))
     db.merge(Tenant(id=TENANT, name="Kaveri Auto Care (fictional)", locality="Kukatpally, Hyderabad"))
+    db.flush()                     # PostgreSQL enforces FKs (SQLite does not by default): parents first
     for aid, n, nte in ADVISORS:
         db.add(Advisor(id=aid, tenant_id=TENANT, name=n, name_te=nte))
     for code, en, te, aliases, price, note, mins in SERVICES:
@@ -48,10 +49,13 @@ def seed(days: int = 21) -> None:
     for d in range(7):
         db.add(BusinessHours(tenant_id=TENANT, weekday=d, opens=None if d == 6 else dt.time(9),
                              closes=None if d == 6 else dt.time(19)))
+    db.flush()
     for cid, n, ph, vehicles in CUSTOMERS:
         db.add(Customer(id=cid, tenant_id=TENANT, name=n, phone=ph))
+        db.flush()
         for i, (reg, model) in enumerate(vehicles):
             db.add(Vehicle(id=f"{cid}v{i}", tenant_id=TENANT, customer_id=cid, reg=reg, make_model=model))
+    db.flush()
     start = now_ist().date()
     for k in range(days):
         day = start + dt.timedelta(days=k)
@@ -64,11 +68,13 @@ def seed(days: int = 21) -> None:
     db.close()
 
 
-def add_credential(tenant: str, label: str) -> str:
+def add_credential(tenant: str, label: str, purpose: str = "tools") -> str:
+    if purpose not in ("tools", "webhook"):
+        raise ValueError("purpose must be tools or webhook")
     Base.metadata.create_all(engine)
     secret = new_secret()
     db = SessionLocal()
-    db.add(AgentCredential(tenant_id=tenant, label=label, secret_sha256=sha256(secret)))
+    db.add(AgentCredential(tenant_id=tenant, label=label, purpose=purpose, secret_sha256=sha256(secret)))
     db.commit()
     db.close()
     return secret
@@ -77,7 +83,8 @@ def add_credential(tenant: str, label: str) -> str:
 if __name__ == "__main__":
     seed()
     if len(sys.argv) > 1 and sys.argv[1] == "--with-credentials":
-        print("TOOLS_BEARER_SECRET=" + add_credential(TENANT, "sarvam-agent-smoke"))
-        print("WEBHOOK_PATH_SECRET=" + add_credential(TENANT, "sarvam-webhook"))
-        print("Store these now; only SHA-256 hashes are kept in the database.")
+        # Printed once to the terminal (stdout), never to application logs. Only SHA-256 hashes are stored.
+        print("TOOLS_BEARER_SECRET=" + add_credential(TENANT, "sarvam-agent-smoke", "tools"))
+        print("WEBHOOK_METADATA_TOKEN=" + add_credential(TENANT, "sarvam-webhook", "webhook"))
+        print("Store these now in your password manager; they cannot be shown again.")
     print("seeded", TENANT)

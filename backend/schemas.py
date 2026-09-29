@@ -60,15 +60,16 @@ class LookupCustomerRequest(ToolRequest):
 
 class VehicleOut(BaseModel):
     reg_masked: str
-    reg_full: str | None = None
     make_model: str | None = None
 
 
 class LookupCustomerResponse(Envelope):
+    """Caller IDENTIFICATION only (docs/decisions/0004-caller-identity.md). Never authentication."""
     found: bool = False
-    is_calling_number: bool = False
-    name: str | None = None
-    vehicles: list[VehicleOut] = []
+    caller_id_match: bool = False          # looked-up number equals the platform-reported caller number
+    identity_assurance: Literal["none", "unverified_caller_id"] = "none"
+    authenticated: Literal[False] = False  # constant: this API cannot authenticate a caller
+    vehicles: list[VehicleOut] = []        # masked, and only when caller_id_match
     phone_readback: str | None = None
 
 

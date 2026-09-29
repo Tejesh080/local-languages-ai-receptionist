@@ -23,6 +23,7 @@ class AgentCredential(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     tenant_id: Mapped[str] = mapped_column(ForeignKey("tenants.id"))
     label: Mapped[str] = mapped_column(String(100))
+    purpose: Mapped[str] = mapped_column(String(20), default="tools")   # "tools" | "webhook": never interchangeable
     secret_sha256: Mapped[str] = mapped_column(String(64), unique=True)
     active: Mapped[bool] = mapped_column(Boolean, default=True)
 

@@ -69,6 +69,8 @@ def service_info(db: Session, tenant_id: str, rid: str, req: S.ServiceInfoReques
 
 
 def lookup_customer(db: Session, tenant_id: str, rid: str, req: S.LookupCustomerRequest) -> S.LookupCustomerResponse:
+    """MEDIUM sensitivity (0004): recognise a returning caller. Returns masked vehicle candidates only when the number
+    matches the platform-reported caller ID, which is identification, not authentication. Never returns names."""
     caller = normalize_phone(req.caller_number) if req.caller_number else None
     phone = normalize_phone(req.phone) if req.phone.strip() else caller
     if not phone:
@@ -76,19 +78,21 @@ def lookup_customer(db: Session, tenant_id: str, rid: str, req: S.LookupCustomer
                                         message_for_agent="Ask for a 10-digit mobile number.")
     cust = db.scalar(select(Customer).where(Customer.tenant_id == tenant_id, Customer.phone == phone))
     readback = format_phone_readback(phone)
+    match = caller is not None and phone == caller
+    assurance = "unverified_caller_id" if match else "none"
     if not cust:
-        return S.LookupCustomerResponse(request_id=rid, status="not_found", found=False, phone_readback=readback,
-                                        is_calling_number=phone == caller)
+        return S.LookupCustomerResponse(request_id=rid, status="not_found", found=False, caller_id_match=match,
+                                        identity_assurance=assurance, phone_readback=readback)
+    if not match:
+        return S.LookupCustomerResponse(
+            request_id=rid, status="ok", found=True, caller_id_match=False, identity_assurance="none", phone_readback=readback,
+            message_for_agent="Do not reveal anything about this number's records. Ask the caller for the full vehicle number.")
     vehicles = list(db.scalars(select(Vehicle).where(Vehicle.customer_id == cust.id)))
-    if phone == caller:
-        return S.LookupCustomerResponse(request_id=rid, status="ok", found=True, is_calling_number=True, name=cust.name,
-                                        phone_readback=readback,
-                                        vehicles=[S.VehicleOut(reg_masked="****" + v.reg[-4:], reg_full=v.reg, make_model=v.make_model) for v in vehicles])
-    # Privacy: a different number than the caller's own -> no name, masked vehicles only.
     return S.LookupCustomerResponse(
-        request_id=rid, status="ok", found=True, is_calling_number=False, name=None, phone_readback=readback,
-        vehicles=[S.VehicleOut(reg_masked="****" + v.reg[-4:]) for v in vehicles],
-        message_for_agent="Number is on file but is not the calling number. Do not reveal name or history; ask the caller to state the full vehicle number.")
+        request_id=rid, status="ok", found=True, caller_id_match=True, identity_assurance="unverified_caller_id",
+        phone_readback=readback, vehicles=[S.VehicleOut(reg_masked="****" + v.reg[-4:], make_model=v.make_model) for v in vehicles],
+        message_for_agent="Returning caller (caller ID, unverified). You may ask 'is this for the vehicle ending XXXX?'. "
+                          "Do not state names, history or booking details.")
 
 
 def check_availability(db: Session, tenant_id: str, rid: str, req: S.CheckAvailabilityRequest) -> S.CheckAvailabilityResponse:
@@ -181,15 +185,18 @@ def create_booking(db: Session, tenant_id: str, rid: str, req: S.CreateBookingRe
                              .values(booked=Slot.booked + 1)).rowcount
         if claimed != 1:
             db.rollback()
-            return S.CreateBookingResponse(request_id=rid, status="unavailable",
-                                           message_for_agent="Slot just got taken. Check availability again; do not say booked.")
-        db.add(Booking(id="BK" + uuid.uuid4().hex[:6].upper(), tenant_id=tenant_id, slot_id=slot.id, service_id=svc.id,
-                       customer_phone=phone, customer_name=req.customer_name, vehicle_reg=reg,
-                       interaction_id=req.interaction_id, idempotency_key=key))
-        try:
-            db.commit()
-        except IntegrityError:
-            db.rollback()
+            # A concurrent retry of THIS request may have taken the last seat: that is success, not "unavailable".
+            if db.scalar(select(Booking).where(Booking.tenant_id == tenant_id, Booking.idempotency_key == key)) is None:
+                return S.CreateBookingResponse(request_id=rid, status="unavailable",
+                                               message_for_agent="Slot just got taken. Check availability again; do not say booked.")
+        else:
+            db.add(Booking(id="BK" + uuid.uuid4().hex[:8].upper(), tenant_id=tenant_id, slot_id=slot.id, service_id=svc.id,
+                           customer_phone=phone, customer_name=req.customer_name, vehicle_reg=reg,
+                           interaction_id=req.interaction_id, idempotency_key=key))
+            try:
+                db.commit()
+            except IntegrityError:
+                db.rollback()   # same idempotency key committed concurrently; our slot increment rolls back with it
     # Read back from the database: only a persisted row counts as confirmed.
     b = db.scalar(select(Booking).where(Booking.tenant_id == tenant_id, Booking.idempotency_key == key))
     if b is None:
