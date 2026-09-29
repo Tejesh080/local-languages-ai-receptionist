@@ -1,4 +1,4 @@
-# E7 part 1 (RUN 2, after -avu rule): entity resolver on SYNTHETIC perturbations (2026-09-29, git uncommitted)
+# E7 part 1 (RUN 2, after -avu rule, re-run at commit): entity resolver on SYNTHETIC perturbations (2026-09-29, git 716c369)
 
 Status: MEASURED on hand-written text perturbations, NOT on STT output. It tests the resolver logic and policy only.
 Real-transcript E7 runs after E4 (scripts/e7_on_stt.py).
